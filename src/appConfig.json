@@ -1,0 +1,4 @@
+{
+  "baseURL": "https://api.openweathermap.org/data/2.5/forecast",
+  "appid": "b7e0e2e1746bc33d8eaff5383ad2a453"
+}
