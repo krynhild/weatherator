@@ -1,8 +1,8 @@
 import axios, {AxiosInstance} from 'axios';
 
 export class HttpClient {
-    private appid: string;
-    protected readonly instance: AxiosInstance;
+    private readonly appid: string;
+    private readonly instance: AxiosInstance;
 
     public constructor(appid: string, baseURL?: string) {
         this.appid = appid;

@@ -6,7 +6,11 @@ import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles({
   root: {
-    "margin": '50px'
+    "margin": '50px',
+    transition: "all 0.2s ease 0s"
+  },
+  input: {
+    padding: "10px 15px 10px 15px"
   }
 })
 
@@ -17,13 +21,16 @@ export function Search() {
 
   const submit = (e) => {
     e.preventDefault();
-    dispatch(load(value));
+    value.trim() && dispatch(load(value.trim()));
   }
 
   return (
     <form className={classes.root} noValidate autoComplete="off" onSubmit={submit}>
       <TextField
-        variant="outlined"
+        variant={"outlined"}
+        inputProps={{
+          className: classes.input
+        }}
         placeholder={"Enter your city name"}
         value={value}
         onChange={({ currentTarget: { value } }) => setValue(value)} />

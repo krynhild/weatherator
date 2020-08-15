@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 export function WeatherWidget() {
   const classes = useStyles();
   const { name, country } = useSelector(getGeoData);
-  const { main, description, icon } = useSelector(getShortForecast);
+  const { description, icon } = useSelector(getShortForecast);
 
   return (
     <Paper className={classes.root} elevation={0}>

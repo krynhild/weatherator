@@ -11,11 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Typography variant={"h2"}>Weather App</Typography>
-         <Search/>
-        {loaded ? <WeatherWidget/> : failed ? <ErrorWidget/> : null }
-      </header>
+      <Typography variant={"h2"}>Weather App</Typography>
+      <Search />
+      {loaded ? <WeatherWidget /> : failed ? <ErrorWidget /> : null}
     </div>
   );
 }
