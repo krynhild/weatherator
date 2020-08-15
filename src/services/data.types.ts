@@ -9,7 +9,14 @@ type City = {
     timezone: number
 }
 
-type Forecast = {
+export type ShortForecast = {
+    id: number,
+    main: string,
+    description: string,
+    icon: string
+}
+
+export type Forecast = {
     clouds: { all: number }
     dt: number
     dt_txt: string
@@ -23,9 +30,9 @@ type Forecast = {
         temp_kf: number
     }
     pop: number,
-    sys: { pod: string }
-    visibility: number
-    weather: [{ id: number, main: string, description: string, icon: string }]
+    sys: { pod: string },
+    visibility: number,
+    weather: Array<ShortForecast>,
     wind: { speed: number, deg: number }
 }
 

@@ -9,7 +9,7 @@ import './index.css';
 import { HttpClient } from "./services/http.service";
 
 const http = new HttpClient(appConfig.appid, appConfig.baseURL);
-const store = makeStore({ api: new DataService(http)});
+const store = makeStore({ api: new DataService(http)}, {weather: {}});
 
 ReactDOM.render(
   <React.StrictMode>
