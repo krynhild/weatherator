@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { DataService } from "./services/data.service";
-import appConfig from "./appConfig";
 import { Provider } from "react-redux";
-import { makeStore } from "./store";
-import './index.css';
-import { HttpClient } from "./services/http.service";
+import App from './App';
 
-const http = new HttpClient(appConfig.appid, appConfig.baseURL);
+import { HttpClient } from "./services/http.service";
+import { DataService } from "./services/data.service";
+import { makeStore } from "./store";
+
+import appConfig from "./appConfig";
+import './index.css';
+
+const http = new HttpClient(process.env.REACT_APP_USER_ID, appConfig.baseURL);
 const store = makeStore({ api: new DataService(http)}, {weather: {}});
 
 ReactDOM.render(

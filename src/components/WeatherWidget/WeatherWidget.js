@@ -4,7 +4,6 @@ import { getGeoData, getShortForecast } from "../../store/data.selectors";
 import { makeStyles } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import appConfig from "../../appConfig.json";
-import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles({
   root: {
