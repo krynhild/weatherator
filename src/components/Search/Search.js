@@ -15,8 +15,13 @@ export function Search() {
   const [value, setValue] = useState("");
   const classes = useStyles();
 
+  const submit = (e) => {
+    e.preventDefault();
+    dispatch(load(value));
+  }
+
   return (
-    <form className={classes.root} noValidate autoComplete="off" onSubmit={() => dispatch(load(value))}>
+    <form className={classes.root} noValidate autoComplete="off" onSubmit={submit}>
       <TextField
         variant="outlined"
         placeholder={"Enter your city name"}
@@ -24,4 +29,4 @@ export function Search() {
         onChange={({ currentTarget: { value } }) => setValue(value)} />
     </form>
   );
-};
+}
