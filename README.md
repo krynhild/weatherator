@@ -12,9 +12,9 @@
 Доступна на https://krynhild.github.io/
 
 #### Локально:
-1. Склонировать репозиторий: git clone https://github.com/krynhild/weatherator.git
-2. Установить все зависимости: cd weatherator && yarn
-3. Запустить приложение: yarn start. Приложение откроется в браузере по умолчанию по адресу localhost:3000.
+1. Склонировать репозиторий: `git clone https://github.com/krynhild/weatherator.git`
+2. Установить все зависимости: `cd weatherator && yarn`
+3. Запустить приложение: `yarn start`. Приложение откроется в браузере по умолчанию по адресу `localhost:3000`.
 
 
 ## Процесс работы программы
