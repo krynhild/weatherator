@@ -1,4 +1,4 @@
-import {LOAD_FAILURE, LOAD_SUCCESS} from "./data.actions";
+import {CLEAR_DATA, LOAD_FAILURE, LOAD_SUCCESS} from "./data.actions";
 import {AnyAction} from "redux";
 
 const initialState = {
@@ -17,6 +17,10 @@ export const reducer = (state = initialState, {type, payload}: AnyAction) => {
             return {
                 error: payload,
                 success: false
+            }
+        case CLEAR_DATA:
+            return {
+                error: null
             }
         default:
             return state;

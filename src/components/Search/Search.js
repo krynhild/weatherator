@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { load } from "../../store/data.actions";
+import { clear, load } from "../../store/data.actions";
 import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles({
@@ -22,6 +22,7 @@ export function Search() {
   const submit = (e) => {
     e.preventDefault();
     value.trim() && dispatch(load(value.trim()));
+    !value.trim() && dispatch(clear());
   }
 
   return (

@@ -3,6 +3,7 @@ import {DataService} from "../services/data.service";
 
 export const LOAD_SUCCESS = "LOAD_SUCCESS";
 export const LOAD_FAILURE = "LOAD_FAILURE";
+export const CLEAR_DATA = "CLEAR_DATA";
 
 export const load = (city: String) => async (dispatch: Dispatch, getState: Function, {api} : {api: DataService}) => {
     try {
@@ -21,4 +22,8 @@ export const loadSuccess: ActionCreator<Action> = (data: any) => ({
 export const loadFailure: ActionCreator<Action> = (error: any) => ({
     type: LOAD_FAILURE,
     payload: error
+});
+
+export const clear: ActionCreator<Action> = () => ({
+   type: CLEAR_DATA
 });
