@@ -13,6 +13,8 @@ import './index.css';
 const http = new HttpClient(process.env.REACT_APP_USER_ID, appConfig.baseURL);
 const store = makeStore({ api: new DataService(http)}, {weather: {}});
 
+document.title = 'changed title';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
